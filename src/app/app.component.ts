@@ -6,4 +6,13 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  showSecret: boolean = false;
+  clicks:any = [];
+
+  secretToggle() {
+    this.showSecret = !this.showSecret;
+    this.clicks.push('Display ' + 
+      this.showSecret + 
+      ' ' + Date())
+  }
 }
